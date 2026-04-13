@@ -4,13 +4,13 @@ description: "Trainingszeiten, Trainingsablauf und Probetraining in Oldenburg. K
 layout: "training"
 ---
 
-### Heiligengeisttorschule
+**Heiligengeisttorschule**
 
 Den Eingang zur Turnhalle der Heiligengeisttorschule findest du neben der Schulmensa (nach der PKW-Einfahrt rechts an der Mensa vorbei, dann links bei der Tischtennisplatte). Sollte die Tür geschlossen sein, einfach klingeln!
 
 ## Ablauf des Trainings
 
-![Capoeira-Training beim Verein](/images/training-ablauf.jpg)
+![Capoeira-Training beim Verein](/images/training1.jpg)
 
 Das Training ist für Erwachsene, Jugendliche und Kinder ab ca. 6 Jahren geeignet, sowohl für Anfänger als auch für Fortgeschrittene!
 

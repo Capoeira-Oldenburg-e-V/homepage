@@ -1,7 +1,8 @@
-baseURL = 'https://capoeira-oldenburg.de/'
+baseURL = 'https://www.capoeira-oldenburg.de/'
 languageCode = 'de'
 title = 'Capoeira Oldenburg e. V.'
 defaultContentLanguage = 'de'
+enableRobotsTXT = true
 
 [permalinks]
   [permalinks.page]

@@ -11,7 +11,7 @@
     {{ range $upcoming.ByDate }}
     <article class="event-card">
       <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-      <p class="event-date">{{ .Date.Format "02. January 2006" }}</p>
+      <p class="event-date">{{ .Date | time.Format ":date_long" }}</p>
       {{ with .Params.location }}<p class="event-location">{{ . }}</p>{{ end }}
     </article>
     {{ end }}
@@ -26,7 +26,7 @@
     {{ range $past.ByDate.Reverse }}
     <article class="event-card">
       <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-      <p class="event-date">{{ .Date.Format "02. January 2006" }}</p>
+      <p class="event-date">{{ .Date | time.Format ":date_long" }}</p>
       {{ with .Params.location }}<p class="event-location">{{ . }}</p>{{ end }}
     </article>
     {{ end }}

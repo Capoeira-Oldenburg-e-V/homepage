@@ -6,7 +6,7 @@ description: "Capoeira ist eine faszinierende und komplexe Kunstform – Bewegun
 Capoeira ist eine faszinierende und komplexe Kunstform.
 Sie umfasst Bewegung, Musik und Kultur.
 
-![was-ist-capoeira.jpg](/images/was-ist-capoeira.jpg)
+![was-ist-capoeira.jpg](/images/training2.jpg)
 
 Sportlich steht Capoeira für Ausdauer, Rhythmus, Akrobatik und Kraft.
 Doch die Capoeira ist viel mehr als nur Sport.

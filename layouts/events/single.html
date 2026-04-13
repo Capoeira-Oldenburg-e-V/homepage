@@ -7,7 +7,7 @@
     <div class="event-info">
       <div class="event-info-item">
         <span>Datum</span>
-        {{ .Date.Format "02. January 2006" }}
+        {{ .Date | time.Format ":date_long" }}
       </div>
       {{ with .Params.location }}
       <div class="event-info-item">
