@@ -1,0 +1,18 @@
+{{ $v := .Site.Data.verein }}
+{{ $addr := dict
+  "@type" "PostalAddress"
+  "streetAddress" $v.address.streetAddress
+  "addressLocality" $v.address.addressLocality
+  "addressRegion" $v.address.addressRegion
+  "postalCode" $v.address.postalCode
+  "addressCountry" $v.address.addressCountry
+}}
+{{ $jsonld := dict
+  "@context" "https://schema.org"
+  "@type" $v.type
+  "name" $v.name
+  "url" $v.url
+  "email" $v.email
+  "address" $addr
+}}
+{{ printf "<script type=\"application/ld+json\">%s</script>" ($jsonld | jsonify) | safeHTML }}

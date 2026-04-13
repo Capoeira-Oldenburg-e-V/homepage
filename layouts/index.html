@@ -1,0 +1,38 @@
+{{ define "main" }}
+<div class="home-hero">
+  {{ $logo := resources.Get "images/logo.png" }}
+  {{ if $logo }}
+  <img src="{{ $logo.RelPermalink }}" alt="{{ .Site.Title }} Logo" class="logo-hero">
+  {{ end }}
+  <h1>{{ .Site.Title }}</h1>
+  <p>Entdecke die afro-brasilianische Kampfkunst – Musik, Bewegung und Gemeinschaft in Oldenburg.</p>
+  <a href="/training/" class="btn">Zu den Trainingszeiten</a>
+</div>
+
+<div class="home-cards">
+  <a href="/training/" class="home-card">
+    <h2>Training</h2>
+    <p>Wann, wo und wie wir trainieren</p>
+  </a>
+  <a href="/ueber-uns/" class="home-card">
+    <h2>Über uns</h2>
+    <p>Unser Verein und unsere Geschichte</p>
+  </a>
+  <a href="/events/" class="home-card">
+    <h2>Events</h2>
+    <p>Veranstaltungen und Workshops</p>
+  </a>
+  <a href="/blog/" class="home-card">
+    <h2>Blog</h2>
+    <p>Neuigkeiten aus dem Verein</p>
+  </a>
+  <a href="/kontakt/" class="home-card">
+    <h2>Kontakt</h2>
+    <p>Schreib uns oder folge uns</p>
+  </a>
+  <a href="/was-ist-capoeira/" class="home-card">
+    <h2>Was ist Capoeira?</h2>
+    <p>Mehr über die Kampfkunst erfahren</p>
+  </a>
+</div>
+{{ end }}

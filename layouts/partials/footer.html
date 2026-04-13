@@ -1,0 +1,19 @@
+<div class="footer-inner">
+  <nav aria-label="Rechtliche Links">
+    <ul>
+      <li><a href="/impressum/">Impressum</a></li>
+      <li><a href="/datenschutzerklaerung/">Datenschutz</a></li>
+    </ul>
+  </nav>
+  {{ $social := .Site.Data.social }}
+  {{ if $social }}
+  <nav aria-label="Social Media">
+    <ul class="social-links">
+      {{ with $social.instagram }}<li><a href="{{ . }}" rel="noopener noreferrer" target="_blank">Instagram</a></li>{{ end }}
+      {{ with $social.facebook }}<li><a href="{{ . }}" rel="noopener noreferrer" target="_blank">Facebook</a></li>{{ end }}
+      {{ with $social.youtube }}<li><a href="{{ . }}" rel="noopener noreferrer" target="_blank">YouTube</a></li>{{ end }}
+    </ul>
+  </nav>
+  {{ end }}
+  <p class="footer-copy">&copy; {{ now.Format "2006" }} {{ .Site.Title }}</p>
+</div>

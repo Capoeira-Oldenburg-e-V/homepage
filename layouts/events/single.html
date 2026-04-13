@@ -1,0 +1,24 @@
+{{ define "main" }}
+<div class="event-single">
+  <article>
+    <header>
+      <h1>{{ .Title }}</h1>
+    </header>
+    <div class="event-info">
+      <div class="event-info-item">
+        <span>Datum</span>
+        {{ .Date.Format "02. January 2006" }}
+      </div>
+      {{ with .Params.location }}
+      <div class="event-info-item">
+        <span>Ort</span>
+        {{ . }}
+      </div>
+      {{ end }}
+    </div>
+    <div class="post-body">
+      {{ .Content }}
+    </div>
+  </article>
+</div>
+{{ end }}

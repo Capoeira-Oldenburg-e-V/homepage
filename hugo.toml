@@ -1,0 +1,50 @@
+baseURL = 'https://capoeira-oldenburg.de/'
+languageCode = 'de'
+title = 'Capoeira Oldenburg e. V.'
+defaultContentLanguage = 'de'
+
+[permalinks]
+  [permalinks.page]
+    blog = '/blog/:slug/'
+    events = '/events/:slug/'
+
+[taxonomies]
+  # Disable default taxonomies we don't use to suppress layout warnings
+
+[params]
+  description = 'Capoeira Oldenburg e. V. – Training, Events und mehr.'
+
+[[menus.main]]
+  name = 'Home'
+  url = '/'
+  weight = 1
+
+[[menus.main]]
+  name = 'Training'
+  url = '/training/'
+  weight = 2
+
+[[menus.main]]
+  name = 'Über uns'
+  url = '/ueber-uns/'
+  weight = 3
+
+[[menus.main]]
+  name = 'Events'
+  url = '/events/'
+  weight = 4
+
+[[menus.main]]
+  name = 'Blog'
+  url = '/blog/'
+  weight = 5
+
+[[menus.main]]
+  name = 'Kontakt'
+  url = '/kontakt/'
+  weight = 6
+
+[[menus.main]]
+  name = 'Was ist Capoeira?'
+  url = '/was-ist-capoeira/'
+  weight = 7

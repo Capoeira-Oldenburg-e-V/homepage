@@ -1,0 +1,28 @@
+{{ define "main" }}
+<div class="page-content">
+  <h1>{{ .Title }}</h1>
+
+  <table class="schedule-table">
+    <thead>
+      <tr>
+        <th>Wochentag</th>
+        <th>Uhrzeit</th>
+        <th>Ort</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{ range .Site.Data.trainingszeiten }}
+      <tr>
+        <td data-label="Wochentag">{{ .weekday }}</td>
+        <td data-label="Uhrzeit">{{ .time }}</td>
+        <td data-label="Ort">{{ .location }}</td>
+      </tr>
+      {{ end }}
+    </tbody>
+  </table>
+
+  <div class="training-content">
+    {{ .Content }}
+  </div>
+</div>
+{{ end }}

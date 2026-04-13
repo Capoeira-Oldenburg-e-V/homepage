@@ -1,0 +1,10 @@
+name: "Capoeira Oldenburg e. V."
+type: "SportsClub"
+url: "https://www.capoeira-oldenburg.de/"
+email: "capo.oldenburg@gmail.com"
+address:
+  streetAddress: "Scheideweg 249"
+  addressLocality: "Oldenburg"
+  addressRegion: "Niedersachsen"
+  postalCode: "26127"
+  addressCountry: "DE"

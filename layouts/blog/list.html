@@ -1,0 +1,17 @@
+{{ define "main" }}
+<div class="post-list">
+  <h1>{{ .Title }}</h1>
+  {{ $pages := .Pages.ByDate.Reverse }}
+  {{ if $pages }}
+    {{ range $pages }}
+    <article class="post-card">
+      <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+      <p class="post-meta">{{ .Date.Format "02. January 2006" }}</p>
+      {{ with .Description }}<p class="post-summary">{{ . }}</p>{{ end }}
+    </article>
+    {{ end }}
+  {{ else }}
+    <p class="empty-state">Noch keine Beiträge vorhanden.</p>
+  {{ end }}
+</div>
+{{ end }}

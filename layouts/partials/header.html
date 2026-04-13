@@ -1,0 +1,22 @@
+<div class="header-inner">
+  <a href="/" class="site-logo">
+    {{ $logo := resources.Get "images/logo.png" }}
+    {{ if $logo }}
+      <img src="{{ $logo.RelPermalink }}" alt="{{ .Site.Title }} Logo" class="logo-img">
+    {{ else }}
+      <span class="site-name">{{ .Site.Title }}</span>
+    {{ end }}
+  </a>
+  <button class="nav-toggle" aria-label="Navigation öffnen" aria-expanded="false" aria-controls="main-nav">
+    <span class="nav-toggle-bar"></span>
+    <span class="nav-toggle-bar"></span>
+    <span class="nav-toggle-bar"></span>
+  </button>
+  <nav id="main-nav" aria-label="Hauptnavigation">
+    <ul>
+      {{ range .Site.Menus.main }}
+      <li><a href="{{ .URL }}"{{ if eq $.RelPermalink .URL }} aria-current="page"{{ end }}>{{ .Name }}</a></li>
+      {{ end }}
+    </ul>
+  </nav>
+</div>
