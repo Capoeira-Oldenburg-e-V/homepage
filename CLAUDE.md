@@ -28,7 +28,6 @@ Hugo picks a template in this order of specificity:
 | `content/blog/*.md` | `layouts/blog/single.html` |
 | `content/events/*.md` | `layouts/events/single.html` |
 | `content/training.md` | `layouts/_default/training.html` (via `layout: "training"` frontmatter) |
-| `content/kontakt.md` | `layouts/_default/kontakt.html` (via `layout: "kontakt"` frontmatter) |
 | All other `*.md` | `layouts/_default/single.html` |
 | `content/_index.md` | `layouts/index.html` |
 | `content/blog/_index.md` | `layouts/blog/list.html` |
@@ -39,14 +38,13 @@ Hugo picks a template in this order of specificity:
 Site-wide structured data used in templates:
 
 - `data/verein.yaml` — club name, contact, address, type (drives JSON-LD schema)
-- `data/social.yaml` — social media URLs (used in footer and Kontakt page)
 - `data/trainingszeiten.yaml` — training schedule (used only in `layouts/_default/training.html`)
 
 ### Partials (`layouts/partials/`)
 
 - `head.html` — `<head>` contents: meta, canonical, CSS (Hugo Pipes), favicon, JSON-LD
 - `header.html` — site logo + navigation from `menus.main` in `hugo.toml`
-- `footer.html` — legal links + social links from `data/social.yaml`
+- `footer.html` — legal links and copyright
 - `jsonld.html` — LocalBusiness structured data from `data/verein.yaml`
 
 ### CSS

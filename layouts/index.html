@@ -18,21 +18,45 @@
     <h2>Über uns</h2>
     <p>Unser Verein und unsere Geschichte</p>
   </a>
-  <a href="/events/" class="home-card">
-    <h2>Events</h2>
-    <p>Veranstaltungen und Workshops</p>
-  </a>
-  <a href="/blog/" class="home-card">
-    <h2>Blog</h2>
-    <p>Neuigkeiten aus dem Verein</p>
-  </a>
-  <a href="/kontakt/" class="home-card">
-    <h2>Kontakt</h2>
-    <p>Schreib uns oder folge uns</p>
-  </a>
   <a href="/was-ist-capoeira/" class="home-card">
     <h2>Was ist Capoeira?</h2>
     <p>Mehr über die Kampfkunst erfahren</p>
   </a>
 </div>
+
+{{ $posts := (.Site.GetPage "posts").Pages.ByDate.Reverse }}
+{{ if $posts }}
+<section class="feed-section">
+  {{ range $posts }}
+  {{ if gt .WordCount 80 }}
+  {{ $page := . }}
+  {{ $preview := "" }}
+  {{ with .Description }}
+    {{ $preview = . }}
+  {{ else }}
+    {{ $preview = $page.Summary | plainify | truncate 160 " …" }}
+  {{ end }}
+  <article class="feed-card">
+    <details>
+      <summary>
+        <div class="summary-content">
+          <h2>{{ .Title }}</h2>
+          <p class="feed-meta">{{ .Date | time.Format ":date_long" }}{{ with .Params.location }} · {{ . }}{{ end }}</p>
+          {{ with $preview }}<p class="feed-preview">{{ . }}</p>{{ end }}
+          <p class="read-more">Mehr erfahren …</p>
+        </div>
+      </summary>
+      <div class="feed-body">{{ .Content }}</div>
+    </details>
+  </article>
+  {{ else }}
+  <article class="feed-card">
+    <h2>{{ .Title }}</h2>
+    <p class="feed-meta">{{ .Date | time.Format ":date_long" }}{{ with .Params.location }} · {{ . }}{{ end }}</p>
+    {{ .Content }}
+  </article>
+  {{ end }}
+  {{ end }}
+</section>
+{{ end }}
 {{ end }}

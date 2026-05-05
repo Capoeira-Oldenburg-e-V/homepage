@@ -3,11 +3,7 @@ languageCode = 'de'
 title = 'Capoeira Oldenburg e. V.'
 defaultContentLanguage = 'de'
 enableRobotsTXT = true
-
-[permalinks]
-  [permalinks.page]
-    blog = '/blog/:slug/'
-    events = '/events/:slug/'
+buildFuture = true
 
 [taxonomies]
   # Disable default taxonomies we don't use to suppress layout warnings
@@ -31,21 +27,6 @@ enableRobotsTXT = true
   weight = 3
 
 [[menus.main]]
-  name = 'Events'
-  url = '/events/'
-  weight = 4
-
-[[menus.main]]
-  name = 'Blog'
-  url = '/blog/'
-  weight = 5
-
-[[menus.main]]
-  name = 'Kontakt'
-  url = '/kontakt/'
-  weight = 6
-
-[[menus.main]]
   name = 'Was ist Capoeira?'
   url = '/was-ist-capoeira/'
-  weight = 7
+  weight = 4

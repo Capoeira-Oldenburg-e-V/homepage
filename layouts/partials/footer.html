@@ -5,14 +5,5 @@
       <li><a href="/datenschutzerklaerung/">Datenschutz</a></li>
     </ul>
   </nav>
-  {{ $social := .Site.Data.social }}
-  {{ if $social }}
-  <nav aria-label="Social Media">
-    <ul class="social-links">
-      {{ with $social.instagram }}<li><a href="{{ . }}" rel="noopener noreferrer" target="_blank">Instagram</a></li>{{ end }}
-      {{ with $social.facebook }}<li><a href="{{ . }}" rel="noopener noreferrer" target="_blank">Facebook</a></li>{{ end }}
-    </ul>
-  </nav>
-  {{ end }}
   <p class="footer-copy">&copy; {{ now.Format "2006" }} {{ .Site.Title }}</p>
 </div>

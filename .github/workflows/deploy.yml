@@ -4,9 +4,6 @@ on:
   push:
     branches:
       - main
-  schedule:
-    # Weekly rebuild so past events move to archive even without commits
-    - cron: '0 4 * * 1'
 
 permissions:
   contents: read
