@@ -3,7 +3,7 @@
 <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
 {{ with .Description }}<meta name="description" content="{{ . }}">{{ else }}{{ with .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}{{ end }}
 <link rel="canonical" href="{{ .Permalink }}">
-<link rel="icon" type="image/png" href="/images/logo.png">
+<link rel="icon" type="image/png" href="{{ "images/logo.png" | relURL }}">
 {{ $title := cond .IsHome .Site.Title (printf "%s | %s" .Title .Site.Title) }}
 {{ $description := or .Description .Site.Params.description }}
 {{ $image := .Site.BaseURL | strings.TrimSuffix "/" | printf "%s/images/logo.png" }}

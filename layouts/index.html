@@ -6,19 +6,19 @@
   {{ end }}
   <h1>{{ .Site.Title }}</h1>
   <p>Entdecke die afro-brasilianische Kampfkunst – Musik, Bewegung und Gemeinschaft in Oldenburg.</p>
-  <a href="/training/" class="btn">Zu den Trainingszeiten</a>
+  <a href="{{ "training/" | relURL }}" class="btn">Zu den Trainingszeiten</a>
 </div>
 
 <div class="home-cards">
-  <a href="/training/" class="home-card">
+  <a href="{{ "training/" | relURL }}" class="home-card">
     <h2>Training</h2>
     <p>Wann, wo und wie wir trainieren</p>
   </a>
-  <a href="/ueber-uns/" class="home-card">
+  <a href="{{ "ueber-uns/" | relURL }}" class="home-card">
     <h2>Über uns</h2>
     <p>Unser Verein und unsere Geschichte</p>
   </a>
-  <a href="/was-ist-capoeira/" class="home-card">
+  <a href="{{ "was-ist-capoeira/" | relURL }}" class="home-card">
     <h2>Was ist Capoeira?</h2>
     <p>Mehr über die Kampfkunst erfahren</p>
   </a>

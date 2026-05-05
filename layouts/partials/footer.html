@@ -1,8 +1,8 @@
 <div class="footer-inner">
   <nav aria-label="Rechtliche Links">
     <ul>
-      <li><a href="/impressum/">Impressum</a></li>
-      <li><a href="/datenschutzerklaerung/">Datenschutz</a></li>
+      <li><a href="{{ "impressum/" | relURL }}">Impressum</a></li>
+      <li><a href="{{ "datenschutzerklaerung/" | relURL }}">Datenschutz</a></li>
     </ul>
   </nav>
   <p class="footer-copy">&copy; {{ now.Format "2006" }} {{ .Site.Title }}</p>

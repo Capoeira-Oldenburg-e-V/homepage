@@ -1,5 +1,5 @@
 <div class="header-inner">
-  <a href="/" class="site-logo">
+  <a href="{{ "" | relURL }}" class="site-logo">
     {{ $logo := resources.Get "images/logo.png" }}
     {{ if $logo }}
       <img src="{{ $logo.RelPermalink }}" alt="{{ .Site.Title }} Logo" class="logo-img">
