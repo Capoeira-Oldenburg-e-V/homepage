@@ -1,4 +1,4 @@
-baseURL = 'https://www.capoeira-oldenburg.de/'
+baseURL = 'https://capoeira-ol.de/'
 languageCode = 'de'
 title = 'Capoeira Oldenburg e. V.'
 defaultContentLanguage = 'de'
