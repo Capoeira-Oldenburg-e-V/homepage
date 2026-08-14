@@ -1,6 +1,6 @@
 ---
 title: "Willkommen auf unserer neuen Website"
-date: 2026-05-05
+date: 2026-08-14
 description: "Die neue Website von Capoeira Oldenburg e. V. ist online – schneller, mobil-freundlicher und mit allen Infos, die ihr braucht."
 ---
 
