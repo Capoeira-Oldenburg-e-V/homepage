@@ -5,8 +5,10 @@ location: "Oldenburg"
 description: "Unser Workshop mit Gästen aus Brasilien, den Niederlanden, Köln und weiteren Städten."
 ---
 
-Wir freuen uns darauf, mit euch unsere diesjährige Volta por Cima feiern zu dürfen.
+![Volta por Cima 2026](/images/blog/2026-volta-por-cima.jpg)
 
-Seid gespannt auf die Workshops mit Mestre Sonso, Contra Mestre Juba de Leão und Professora Bailarina.
+Unsere diesjährige Volta por Cima war der Hit!
 
-Anmelden könnt ihr euch unter diesem Link: [https://forms.gle/WsDPRyjKVLX2Wjrk6](https://forms.gle/WsDPRyjKVLX2Wjrk6)
+Vielen Dank an Mestre Sonso, Contra Mestre Juba de Leão und Professora Bailarina für die vielen Workshops und eine wunderschöne Batizado!
+
+Wir freuen uns schon aufs nächste Mal! <3
