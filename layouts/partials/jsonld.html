@@ -1,4 +1,4 @@
-{{ $v := .Site.Data.verein }}
+{{ $v := hugo.Data.verein }}
 {{ $addr := dict
   "@type" "PostalAddress"
   "streetAddress" $v.address.streetAddress

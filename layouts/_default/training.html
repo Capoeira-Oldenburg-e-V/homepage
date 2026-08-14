@@ -11,7 +11,7 @@
       </tr>
     </thead>
     <tbody>
-      {{ range .Site.Data.trainingszeiten }}
+      {{ range hugo.Data.trainingszeiten }}
       <tr>
         <td data-label="Wochentag">{{ .weekday }}</td>
         <td data-label="Uhrzeit">{{ .time }}</td>
