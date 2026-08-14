@@ -1,1 +1,14 @@
-<img src="{{ .Destination | strings.TrimPrefix "/" | relURL | safeURL }}" alt="{{ .PlainText }}"{{ with .Title }} title="{{ . }}"{{ end }}>
+{{- $src := .Destination | strings.TrimPrefix "/" -}}
+{{- $img := resources.Get $src -}}
+{{- if $img -}}
+  {{- if gt $img.Width 1400 -}}
+    {{- $img = $img.Resize "1400x q88" -}}
+  {{- end -}}
+  {{- $webp := $img.Process "webp q80" -}}
+  <picture>
+    <source srcset="{{ $webp.RelPermalink }}" type="image/webp">
+    <img src="{{ $img.RelPermalink }}" alt="{{ .PlainText }}"{{ with .Title }} title="{{ . }}"{{ end }} width="{{ $img.Width }}" height="{{ $img.Height }}" loading="lazy" decoding="async">
+  </picture>
+{{- else -}}
+  <img src="{{ $src | relURL | safeURL }}" alt="{{ .PlainText }}"{{ with .Title }} title="{{ . }}"{{ end }} loading="lazy" decoding="async">
+{{- end -}}

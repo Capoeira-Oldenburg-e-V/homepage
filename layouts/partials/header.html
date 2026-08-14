@@ -2,7 +2,8 @@
   <a href="{{ "" | relURL }}" class="site-logo">
     {{ $logo := resources.Get "images/logo.png" }}
     {{ if $logo }}
-      <img src="{{ $logo.RelPermalink }}" alt="{{ .Site.Title }} Logo" class="logo-img">
+      {{ $logo = $logo.Resize "88x88 webp q85" }}
+      <img src="{{ $logo.RelPermalink }}" alt="{{ .Site.Title }} Logo" class="logo-img" width="44" height="44">
     {{ else }}
       <span class="site-name">{{ .Site.Title }}</span>
     {{ end }}

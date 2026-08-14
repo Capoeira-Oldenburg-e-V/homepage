@@ -53,10 +53,11 @@ Single file: `assets/css/main.css`, processed through Hugo Pipes (minified + fin
 
 ### Images
 
-Two locations with different roles:
+All content images live in `assets/images/` (blog photos under `assets/images/blog/`) and are processed by Hugo Pipes. `static/images/logo.png` remains only as the absolute-URL `og:image` target.
 
-- `assets/images/` — processed by Hugo Pipes (currently only `logo.png`, referenced in `header.html` via `resources.Get`)
-- `static/images/` — served verbatim at `/images/*`; used for content images (blog photos, training photos, etc.)
+Markdown images are written with the site-absolute source path, e.g. `![Alt](/images/blog/foo.jpg)`. The render hook `layouts/_default/_markup/render-image.html` resolves that path against `assets/`, downscales anything wider than 1400px, and emits a `<picture>` with a WebP source, a JPEG fallback, intrinsic `width`/`height`, and `loading="lazy"`. Source files therefore stay JPEG/PNG — do not commit WebP by hand.
+
+The logo is converted to WebP at display size in `header.html` and `layouts/index.html`; the favicon is a 64px PNG generated in `head.html`.
 
 ### Navigation
 
