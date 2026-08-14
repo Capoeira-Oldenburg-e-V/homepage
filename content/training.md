@@ -32,4 +32,4 @@ Zu einem kostenlosen Probetraining kannst du gerne vorbeikommen.
 Auch einfach mal Zuschauen ist kein Problem.
 Eine Mitgliedschaft im Verein ist nicht erforderlich.
 
-*Tipp: Capoeira wird barfuß oder mit langen Hosen trainiert. Wenn du Schuhe tragen möchtest, sind Hallenturnschuhe Pflicht.*
+*Tipp: Capoeira wird barfuß und mit langen Hosen trainiert. Wenn du Schuhe tragen möchtest, sind Hallenturnschuhe Pflicht.*
