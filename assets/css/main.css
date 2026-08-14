@@ -65,6 +65,19 @@ a:hover {
   text-decoration: underline;
 }
 
+/* Links inside running text must not rely on color alone (WCAG 1.4.1) */
+.page-content a:not(.btn),
+.feed-card a:not(.btn) {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+  text-decoration-thickness: 1px;
+}
+
+.page-content a:not(.btn):hover,
+.feed-card a:not(.btn):hover {
+  text-decoration-thickness: 2px;
+}
+
 ul, ol {
   list-style: none;
 }
