@@ -4,9 +4,17 @@
   {{- if gt $img.Width 1400 -}}
     {{- $img = $img.Resize "1400x q88" -}}
   {{- end -}}
+  {{- $srcset := slice -}}
+  {{- range slice 400 600 800 1200 -}}
+    {{- if lt . $img.Width -}}
+      {{- $variant := $img.Resize (printf "%dx webp q80" .) -}}
+      {{- $srcset = $srcset | append (printf "%s %dw" $variant.RelPermalink .) -}}
+    {{- end -}}
+  {{- end -}}
   {{- $webp := $img.Process "webp q80" -}}
+  {{- $srcset = $srcset | append (printf "%s %dw" $webp.RelPermalink $img.Width) -}}
   <picture>
-    <source srcset="{{ $webp.RelPermalink }}" type="image/webp">
+    <source srcset="{{ delimit $srcset ", " }}" sizes="(max-width: 940px) 100vw, 900px" type="image/webp">
     <img src="{{ $img.RelPermalink }}" alt="{{ .PlainText }}"{{ with .Title }} title="{{ . }}"{{ end }} width="{{ $img.Width }}" height="{{ $img.Height }}" loading="lazy" decoding="async">
   </picture>
 {{- else -}}

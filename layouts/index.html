@@ -3,7 +3,7 @@
   {{ $logo := resources.Get "images/logo.png" }}
   {{ if $logo }}
   {{ $logo = $logo.Resize "240x240 webp q85" }}
-  <img src="{{ $logo.RelPermalink }}" alt="{{ .Site.Title }} Logo" class="logo-hero" width="120" height="120">
+  <img src="{{ $logo.RelPermalink }}" alt="{{ .Site.Title }} Logo" class="logo-hero" width="120" height="120" fetchpriority="high">
   {{ end }}
   <h1>{{ .Site.Title }}</h1>
   <p>Entdecke die afro-brasilianische Kampfkunst – Musik, Bewegung und Gemeinschaft in Oldenburg.</p>
