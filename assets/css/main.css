@@ -9,6 +9,8 @@
   --color-text-muted: #a0a0a0;
   --color-border: #3a3a3a;
   --color-accent: #e63946;
+  --color-accent-soft: #f5a3a9;
+  --color-accent-bg: #2f1d1f;
 
   --font-sans: 'Segoe UI', system-ui, -apple-system, sans-serif;
   --font-heading: Georgia, 'Times New Roman', serif;
@@ -345,6 +347,51 @@ footer {
 .page-content td:first-child {
   color: var(--color-text-muted);
   white-space: nowrap;
+}
+
+/* Hinweis */
+.notice {
+  max-width: 30rem;
+  margin: 0 auto var(--space-xl);
+  padding: var(--space-lg) var(--space-md);
+  text-align: center;
+  background-color: var(--color-accent-bg);
+  border: 2px solid var(--color-accent);
+  border-radius: var(--radius-lg);
+}
+
+.notice-icon {
+  display: block;
+  margin: 0 auto var(--space-sm);
+  color: var(--color-accent-soft);
+}
+
+.notice-text {
+  max-width: 26rem;
+  margin-inline: auto;
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.5;
+  color: var(--color-text);
+}
+
+.notice--left {
+  max-width: 80ch;
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-md);
+  margin-inline: 0;
+  text-align: left;
+}
+
+.notice--left .notice-icon {
+  flex-shrink: 0;
+  margin: 0.15rem 0 0;
+}
+
+.notice--left .notice-text {
+  max-width: none;
+  margin-inline: 0;
 }
 
 /* Home page */
