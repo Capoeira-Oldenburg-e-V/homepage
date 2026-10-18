@@ -14,5 +14,6 @@
   "url" $v.url
   "email" $v.email
   "address" $addr
+  "sameAs" $v.sameAs
 }}
 {{ printf "<script type=\"application/ld+json\">%s</script>" ($jsonld | jsonify) | safeHTML }}

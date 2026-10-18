@@ -13,6 +13,8 @@ description: "Capoeira Oldenburg e. V. – trainiert unter der Leitung von Mestr
 
 Du kannst uns per Mail unter [capo.oldenburg@gmail.com](mailto:capo.oldenburg@gmail.com) erreichen.
 
+Folge uns auf [YouTube](https://www.youtube.com/@capoeiraoldenburg/) und [Instagram](https://www.instagram.com/capoeira.oldenburg/).
+
 ## Satzung und Co.
 
 - [Satzung](/verein/Satzung.pdf)
